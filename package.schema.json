@@ -1,0 +1,8 @@
+{
+  "properties": {
+    "mdxlint": {
+      "description": "mdxlint configuration",
+      "$ref": "https://json.schemastore.org/mdxlintrc"
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "name": "vscode-mdxlint",
+  "displayName": "mdxlint",
+  "publisher": "remcohaszing",
+  "version": "0.0.0",
+  "description": "Lint and format MDX files",
+  "private": true,
+  "keywords": [
+    "format",
+    "lint",
+    "mdx",
+    "mdxlint",
+    "validate"
+  ],
+  "homepage": "https://github.com/remcohaszing/vscode-mdxlint#readme",
+  "categories": [
+    "Formatters",
+    "Linters"
+  ],
+  "activationEvents": [
+    "onLanguage:mdx"
+  ],
+  "bugs": {
+    "url": "https://github.com/remcohaszing/vscode-mdxlint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/remcohaszing/vscode-mdxlint.git"
+  },
+  "sponsor": {
+    "url": "https://github.com/sponsors/remcohaszing"
+  },
+  "license": "MIT",
+  "author": "Remco Haszing <remcohaszing@gmail.com>",
+  "main": "out/extension.js",
+  "scripts": {
+    "vscode:prepublish": "esbuild extension=src/extension.ts mdxlint-language-server --bundle --platform=node --target=node22 --external:vscode --outdir=out --minify"
+  },
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "capabilities": {
+    "virtualWorkspaces": {
+      "supported": false,
+      "description": "This extension relies on the file system to load mdxlint and remark plugins."
+    },
+    "untrustedWorkspaces": {
+      "supported": false,
+      "description": "This extension loads configuration files and plugins from workspace and executes them."
+    }
+  },
+  "icon": "icon.png",
+  "galleryBanner": {
+    "color": "#010409",
+    "theme": "dark"
+  },
+  "contributes": {
+    "configuration": {
+      "title": "mdxlint",
+      "properties": {
+        "mdxlint.requireConfig": {
+          "type": "boolean",
+          "default": false,
+          "markdownDescription": "If true, only perform actions if a [configuration file](https://github.com/remcohaszing/mdxlint#configuration-file) is found."
+        }
+      }
+    },
+    "jsonValidation": [
+      {
+        "fileMatch": [
+          ".mdxlintrc",
+          ".mdxlintrc.json"
+        ],
+        "url": "https://json.schemastore.org/mdxlintrc"
+      },
+      {
+        "fileMatch": "package.json",
+        "url": "./package.schema.json"
+      }
+    ],
+    "languages": [
+      {
+        "id": "ignore",
+        "filenames": [
+          ".mdxlintignore"
+        ]
+      },
+      {
+        "id": "json",
+        "filenames": [
+          ".mdxlintrc"
+        ]
+      },
+      {
+        "id": "mdx",
+        "extensions": [
+          ".mdx"
+        ],
+        "aliases": [
+          "MDX"
+        ]
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.0.0",
+    "@vscode/vsce": "^3.0.0",
+    "esbuild": "^0.25.0",
+    "mdxlint": "^1.0.0",
+    "mdxlint-language-server": "^1.0.0",
+    "ovsx": "^0.10.0",
+    "prettier": "^3.0.0",
+    "remark-cli": "^12.0.0",
+    "remark-preset-remcohaszing": "^3.0.0",
+    "typescript": "^5.0.0",
+    "vscode-languageclient": "^9.0.0"
+  }
+}

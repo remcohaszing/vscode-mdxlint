@@ -1,0 +1,6 @@
+*
+*/
+!*.md
+!out/
+!icon.png
+!package.schema.json

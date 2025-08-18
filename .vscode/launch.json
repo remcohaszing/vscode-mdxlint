@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "autoAttachChildProcesses": true,
+      "args": [
+        "--disable-updates",
+        "--disable-workspace-trust",
+        "--profile-temp",
+        "--skip-release-notes",
+        "--skip-welcome",
+        "${workspaceFolder}/example/",
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "preLaunchTask": "build"
+    }
+  ]
+}
