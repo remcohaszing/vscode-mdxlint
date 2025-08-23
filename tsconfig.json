@@ -5,6 +5,7 @@
     "module": "preserve",
     "noEmit": true,
     "rootDir": "src",
+    "skipLibCheck": false,
     "strict": true,
     "target": "esnext"
   }
