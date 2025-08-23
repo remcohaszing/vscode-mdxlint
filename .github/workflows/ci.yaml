@@ -62,7 +62,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: package
-      - run: npm install
+      - run: npm ci
       - run: npx ovsx publish *.vsix
         env:
           OVSX_PAT: ${{ secrets.OVSX_PAT }}
@@ -78,7 +78,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: package
-      - run: npm install
+      - run: npm ci
       - run: npx vsce publish *.vsix
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
