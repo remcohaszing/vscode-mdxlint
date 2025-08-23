@@ -2,7 +2,7 @@
   "name": "vscode-mdxlint",
   "displayName": "mdxlint",
   "publisher": "remcohaszing",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lint and format MDX files",
   "private": true,
   "keywords": [
