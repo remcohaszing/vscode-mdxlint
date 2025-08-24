@@ -18,7 +18,7 @@ Use <kbd>Ctrl</kbd> + <kbd>P</kbd> to open the command palette. Then type the fo
 <kbd>Enter</kbd>:
 
 ```
-ext install remcohaszing.mdxlint
+ext install remcohaszing.vscode-mdxlint
 ```
 
 ## Settings
