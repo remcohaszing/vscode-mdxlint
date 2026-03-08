@@ -8,7 +8,7 @@ let client: LanguageClient
 /**
  * Restart the language server
  */
-async function restart() {
+async function restart(): Promise<undefined> {
   if (!client) {
     return
   }
@@ -26,7 +26,7 @@ async function restart() {
  * @param context
  *   The Visual Studio Code extension context.
  */
-export async function activate(context: ExtensionContext) {
+export async function activate(context: ExtensionContext): Promise<undefined> {
   client = new LanguageClient(
     'mdxlint',
     {
@@ -54,6 +54,6 @@ export async function activate(context: ExtensionContext) {
 /**
  * This function when the extension is deactivated.
  */
-export async function deactivate() {
+export async function deactivate(): Promise<undefined> {
   await client.stop()
 }
