@@ -144,6 +144,7 @@
     ]
   },
   "devDependencies": {
+    "@remcohaszing/eslint": "^13.0.0",
     "@types/vscode": "^1.0.0",
     "@vscode/vsce": "^3.0.0",
     "esbuild": "^0.25.0",
