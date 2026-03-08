@@ -55,6 +55,13 @@
     "theme": "dark"
   },
   "contributes": {
+    "commands": [
+      {
+        "command": "mdxlint.restart",
+        "title": "Restart Server",
+        "category": "mdxlint"
+      }
+    ],
     "configuration": {
       "title": "mdxlint",
       "properties": {

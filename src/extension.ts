@@ -1,5 +1,5 @@
-import { ExtensionContext, workspace } from 'vscode'
-import { LanguageClient, TransportKind } from 'vscode-languageclient/node.js'
+import { commands, ExtensionContext, workspace } from 'vscode'
+import { LanguageClient, TransportKind, State } from 'vscode-languageclient/node.js'
 
 let client: LanguageClient
 
@@ -23,9 +23,26 @@ export async function activate(context: ExtensionContext) {
     }
   )
 
+  context.subscriptions.push(commands.registerCommand('mdxlint.restart', restart))
+
   await client.start()
 }
 
 export async function deactivate() {
   await client.stop()
+}
+
+/**
+ * Restart the language server
+ */
+async function restart() {
+  if (!client) {
+    return
+  }
+
+  if (client.state === State.Starting) {
+    return
+  }
+
+  await client.restart()
 }
