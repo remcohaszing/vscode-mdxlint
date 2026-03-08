@@ -70,7 +70,7 @@
           "default": false,
           "markdownDescription": "If true, only perform actions if a [configuration file](https://github.com/remcohaszing/mdxlint#configuration-file) is found."
         },
-        "remark.trace.server.format": {
+        "mdxlint.trace.server.format": {
           "enum": [
             "text",
             "json"
@@ -80,12 +80,12 @@
             "Format as raw JSON"
           ],
           "default": "text",
-          "markdownDescription": "Configure the remark server tracing format.",
+          "markdownDescription": "Configure the mdxlint server tracing format.",
           "tags": [
             "advanced"
           ]
         },
-        "remark.trace.server.verbosity": {
+        "mdxlint.trace.server.verbosity": {
           "enum": [
             "off",
             "messages",
@@ -99,7 +99,7 @@
             "Verbose message tracing."
           ],
           "default": "off",
-          "markdownDescription": "Configure the remark server tracing verbosity.",
+          "markdownDescription": "Configure the mdxlint server tracing verbosity.",
           "tags": [
             "advanced"
           ]
