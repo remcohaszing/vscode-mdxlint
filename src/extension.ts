@@ -3,7 +3,7 @@ import type { ExtensionContext } from 'vscode'
 import { commands, workspace } from 'vscode'
 import { LanguageClient, State, TransportKind } from 'vscode-languageclient/node.js'
 
-let client: LanguageClient
+let client: LanguageClient | undefined
 
 /**
  * Restart the language server
@@ -55,5 +55,8 @@ export async function activate(context: ExtensionContext): Promise<undefined> {
  * This function when the extension is deactivated.
  */
 export async function deactivate(): Promise<undefined> {
-  await client.stop()
+  if (client) {
+    await client.dispose()
+    client = undefined
+  }
 }
