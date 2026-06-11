@@ -3,8 +3,8 @@
   "tasks": [
     {
       "type": "shell",
-      "command": "npm",
-      "args": ["run", "vscode:prepublish", "--", "--sourcemap"],
+      "command": "node",
+      "args": ["--run", "vscode:prepublish", "--", "--sourcemap"],
       "label": "build",
       "group": {
         "kind": "build",
