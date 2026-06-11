@@ -70,6 +70,23 @@
           "default": false,
           "markdownDescription": "If true, only perform actions if a [configuration file](https://github.com/remcohaszing/mdxlint#configuration-file) is found."
         },
+        "mdxlint.ignorePath": {
+          "type": "string",
+          "default": ".mdxlintignore",
+          "markdownDescription": "The file path to the ignore file to load."
+        },
+        "mdxlint.ignorePathResolveFrom": {
+          "enum": [
+            "cwd",
+            "dir"
+          ],
+          "enumDescriptions": [
+            "Resolve patterns in `ignorePath` from the current working folder.",
+            "Resolve patterns in `ignorePath` from the ignore file’s folder."
+          ],
+          "default": "dir",
+          "markdownDescription": "Resolve patterns in `ignorePath` from the current working folder or the ignore file’s folder"
+        },
         "mdxlint.trace.server.format": {
           "enum": [
             "text",
