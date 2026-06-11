@@ -1,6 +1,6 @@
 *
 */
 !*.md
-!out/
+!dist/
 !icon.png
 !package.schema.json

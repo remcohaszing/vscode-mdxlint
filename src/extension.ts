@@ -30,7 +30,7 @@ export async function activate(context: ExtensionContext): Promise<undefined> {
   client = new LanguageClient(
     'mdxlint',
     {
-      module: context.asAbsolutePath('out/mdxlint-language-server.js'),
+      module: context.asAbsolutePath('dist/mdxlint-language-server.js'),
       transport: TransportKind.ipc
     },
     {

@@ -4,6 +4,7 @@
   "publisher": "remcohaszing",
   "version": "1.1.1",
   "description": "Lint and format MDX files",
+  "type": "module",
   "private": true,
   "keywords": [
     "format",
@@ -32,9 +33,9 @@
   },
   "license": "MIT",
   "author": "Remco Haszing <remcohaszing@gmail.com>",
-  "main": "out/extension.js",
+  "main": "dist/extension.js",
   "scripts": {
-    "vscode:prepublish": "esbuild extension=src/extension.ts mdxlint-language-server --bundle --platform=node --target=node22 --external:vscode --outdir=out --minify"
+    "vscode:prepublish": "rolldown -c"
   },
   "engines": {
     "vscode": "^1.103.0"
@@ -163,13 +164,13 @@
     "@remcohaszing/eslint": "^14.0.0",
     "@types/vscode": "^1.0.0",
     "@vscode/vsce": "^3.0.0",
-    "esbuild": "^0.28.0",
     "mdxlint": "^1.0.0",
     "mdxlint-language-server": "^1.0.0",
     "ovsx": "^1.0.0",
     "prettier": "^3.0.0",
     "remark-cli": "^12.0.0",
     "remark-preset-remcohaszing": "^3.0.0",
+    "rolldown": "^1.0.0",
     "typescript": "^6.0.0",
     "vscode-languageclient": "^10.0.0"
   }
