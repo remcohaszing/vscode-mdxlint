@@ -1,7 +1,7 @@
 import type { ExtensionContext } from 'vscode'
 
 import { commands, workspace } from 'vscode'
-import { LanguageClient, State, TransportKind } from 'vscode-languageclient/node.js'
+import { LanguageClient, State, TransportKind } from 'vscode-languageclient/node'
 
 let client: LanguageClient | undefined
 

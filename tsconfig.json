@@ -1,12 +1,10 @@
 {
-  "include": ["src"],
   "compilerOptions": {
     "lib": ["esnext"],
     "module": "preserve",
     "noEmit": true,
-    "rootDir": "src",
     "skipLibCheck": true,
-    "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "verbatimModuleSyntax": true
   }
 }
