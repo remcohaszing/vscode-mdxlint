@@ -72,7 +72,6 @@
         },
         "mdxlint.ignorePath": {
           "type": "string",
-          "default": ".mdxlintignore",
           "markdownDescription": "The file path to the ignore file to load."
         },
         "mdxlint.ignorePathResolveFrom": {
